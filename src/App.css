@@ -205,16 +205,16 @@ textarea {
   height: 30px;
   margin: 0 6px;
   
-  /* background: rgb(164, 162, 162); */
-  color: #0d19b9; /* டார்க்கான டெக்ஸ்ட் */
+  background: var(--accent-gradient);
+  color: #06080d; /* டார்க்கான டெக்ஸ்ட் */
   
-  /* border-radius: 18px; */
+  border-radius: 18px;
   
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.5px;
   
-  /* box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25); */
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
