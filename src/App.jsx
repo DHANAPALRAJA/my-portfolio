@@ -388,44 +388,46 @@ export default function App() {
 
           <div className="projects-grid">
             {projects.map((project) => (
-              <article key={project.number} className="project-card">
-                <div className="project-image-wrapper">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} project preview`}
-                    className="project-image"
-                    loading="lazy"
-                  />
-                  <div className="project-image-overlay">
-                    <span className="project-number">{project.number}</span>
-                    <span className="project-category">{project.category}</span>
+              <a key={project.number} href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
+                <article key={project.number} className="project-card">
+                  <div className="project-image-wrapper">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} project preview`}
+                      className="project-image"
+                      loading="lazy"
+                    />
+                    <div className="project-image-overlay">
+                      <span className="project-number">{project.number}</span>
+                      <span className="project-category">{project.category}</span>
+                    </div>
                   </div>
-                </div>
 
-                <div className="project-content">
-                  <h3 className="project-heading">{project.title}</h3>
-                  <p className="project-summary">{project.desc}</p>
-                  <div className="tag-cluster">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="tech-tag">
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="project-content">
+                    <h3 className="project-heading">{project.title}</h3>
+                    <p className="project-summary">{project.desc}</p>
+                    <div className="tag-cluster">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="tech-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                <div className="project-footer">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <span>View Live Project</span>
-                    <span className="project-arrow">↗</span>
-                  </a>
-                </div>
-              </article>
+                  <div className="project-footer">
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      <span>View Live Project</span>
+                      <span className="project-arrow">↗</span>
+                    </a>
+                  </div>
+                </article>
+              </a>
             ))}
           </div>
         </section>
